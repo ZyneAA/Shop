@@ -1,0 +1,197 @@
+{%extends "layout.html"%}
+
+{%block title %}
+    login
+{%endblock%}
+
+{%block main%}
+    <form action="/storage" method="post">
+        <div class="center_s">
+            <div class="row mb-3">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="input" class="form-control" id="colFormLabel" placeholder="Enter Product Name" name="product">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Amount</label>
+                    <div class="col-sm-10">
+                        <input type="input" class="form-control" id="colFormLabel" placeholder="Enter Amount" name="amount">
+                    </div>
+            </div>
+            <div class="row mb-3">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Price</label>
+                    <div class="col-sm-10">
+                        <input type="input" class="form-control" id="colFormLabel" placeholder="Enter Price" name="price">
+                    </div>
+            </div>
+            
+            <select class="form-select " aria-label="Default select example" name="type">
+                <option selected>Select Type</option>
+                <option value="General">General</option>
+                <option value="Cosmetics">Cosmetics</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Instant Noodles">Instant Noodles</option>
+                <option value="Cigarett">Cigarett</option>
+                <option value="Kitchen">Kitchen</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Summit" class="button">
+            {{success}}
+        </div>
+    </form>
+
+    <br><br>
+    <div>
+        <div class="storage center_t" style="background-color:#EDCEB4">
+            <h4 class="strorage_text">General</h4>
+            <table class="table table-borderless">
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Lastest Update</th>
+                </tr>
+                <hr>
+            {%for lols in info%}
+                {%if lols[1] == "General"%}
+                    <tr>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[2]}}</td>
+                        <td>{{lols[3]}}</td>
+                        <td>{{lols[4]}}</td>
+                    </tr>
+                {% endif %}
+            {%endfor%}
+            </table>
+        </div>
+        <br><br>
+        <div class="storage center_t" style="background-color:#FAB6AC;">
+            <h4 class="strorage_text">Cosmetics</h4>
+            <table class="table table-borderless">
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Lastest Update</th>
+                </tr>
+                <hr>
+            {%for lols in info%}
+                {%if lols[1] == "Cosmetic"%}
+                    <tr>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[2]}}</td>
+                        <td>{{lols[3]}}</td>
+                        <td>{{lols[4]}}</td>
+                    </tr>
+                {% endif %}
+            {%endfor%}
+            </table>
+        </div>
+        <br><br>
+        <div class="storage center_t" style="background-color:#E0B6D2;">
+            <h4 class="strorage_text">Snacks</h4>
+            <table class="table table-borderless">
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Lastest Update</th>
+                </tr>
+                <hr>
+            {%for lols in info%}
+                {%if lols[1] == "Snacks"%}
+                    <tr>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[2]}}</td>
+                        <td>{{lols[3]}}</td>
+                        <td>{{lols[4]}}</td>
+                    </tr>
+                {% endif %}
+            {%endfor%}
+            </table>
+        </div>
+        <br><br>
+        <div class="storage center_t" style="background-color:#DEBCF7;">
+            <h4 class="strorage_text">Instant Noodle</h4>
+            <table class="table table-borderless">
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Lastest Update</th>
+                </tr>
+                <hr>
+            {%for lols in info%}
+                {%if lols[1] == "Instant Noodle"%}
+                    <tr>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[2]}}</td>
+                        <td>{{lols[3]}}</td>
+                        <td>{{lols[4]}}</td>
+                    </tr>
+                {% endif %}
+            {%endfor%}
+            </table>
+        </div>
+        <br><br>
+        <div class="storage center_t" style="background-color:#B4B6ED;">
+            <h4 class="strorage_text">Cigarett</h4>
+            <table class="table table-borderless">
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Lastest Update</th>
+                </tr>
+                <hr>
+            {%for lols in info%}
+                {%if lols[1] == "Cigarett"%}
+                    <tr>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[2]}}</td>
+                        <td>{{lols[3]}}</td>
+                        <td>{{lols[4]}}</td>
+                    </tr>
+                {% endif %}
+            {%endfor%}
+            </table>
+        </div>
+        <br><br>
+        <div class="storage center_t" style="background-color:#D1F0E8;">
+            <h4 class="strorage_text">Kitchen</h4>
+            <table class="table table-borderless">
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Lastest Update</th>
+                </tr>
+                <hr>
+            {%for lols in info%}
+                {%if lols[1] == "Kitchen"%}
+                    <tr>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[2]}}</td>
+                        <td>{{lols[3]}}</td>
+                        <td>{{lols[4]}}</td>
+                    </tr>
+                {% endif %}
+            {%endfor%}
+            </table>
+        </div>
+    </div>
+
+{%endblock%}

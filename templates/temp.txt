@@ -1,0 +1,52 @@
+{%extends "layout.html"%}
+
+{%block title %}
+    login
+{%endblock%}
+
+{%block main%}
+
+
+{%endblock%}
+
+
+{% if session["user_id"] %}
+{% else %}
+{% endif %}
+
+Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy Restricted
+
+//////////DUMP
+#DRIVER CODE STARTS HERE
+mode  = input("Enter mode ('v' for view and 'w' for write) : ")
+if mode == "v": 
+    name = input("Enter name : ")
+    print(view(name))
+
+elif mode == "w":
+    name = input("Enter name (Can not be NULL) : ")
+    password = input("Enter password (Can not be NULL) : ")
+    if name != None and password != None:
+        acc_creator(name, password)
+
+<table class="table table-borderless">
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Lastest Update</th>
+                </tr>
+            {%for lols in lol%}
+                {%if lols[1] == "General"%}
+                    <tr>
+                        <td class="table-dark">{{infos[0]}}</td>
+                        <td>{{lols[0]}}</td>
+                        <td>{{lols[2]}}</td>
+                        <td>{{lols[3]}}</td>
+                        <td>{{lols[4]}}</td>
+                    </tr>
+                {% endif %}
+            {%endfor%}
+            </table>

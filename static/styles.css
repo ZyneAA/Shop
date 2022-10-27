@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.center{
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+.center_s{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.button{
+    border-radius: 12px;
+    width: 100%;
+    height: 50px;
+    background-color: #323539;
+    color: white;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+.quote_font{
+    font-size:15px;
+}
+
+.sus{
+    color: #00003A;
+    border-radius: 25px;
+    padding: 20px;
+    width: 300px;
+    height: 60px;
+    background: rgb(22,246,146);
+    background: linear-gradient(90deg, rgba(22,246,146,0.773546918767507) 0%, rgba(22,200,246,0.38699229691876746) 100%);
+}
+
+.fail{
+    color: #00003A;
+    border-radius: 25px;
+    padding: 20px;
+    width: 300px;
+    height: 60px;
+    background-color:rgba(255,0,0,0.8);
+}
+
+.center_t{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.font_header{
+    font-family: 'Raleway', sans-serif;
+    font-size : 60px;
+    font-weight : 900
+}
+
+.drop{
+    height: 58px;
+}
+
+.storage{
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px; 
+    width: auto;
+    height: auto;  
+}
+
+.strorage_text{
+    color:rgba(48, 40, 40, 0.566);
+}
+
+.ip2 {
+    border-radius: 25px;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px; 
+    width: 200px;
+    height: 15px;    
+}
